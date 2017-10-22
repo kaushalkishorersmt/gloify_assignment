@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @studio.title %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @studio.user_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @studio.status %>
+</p>
+
+<%= link_to 'Edit', edit_studio_path(@studio) %> |
+<%= link_to 'Back', studios_path %>

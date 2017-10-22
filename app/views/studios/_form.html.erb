@@ -1,0 +1,32 @@
+<%= form_with(model: studio, local: true) do |form| %>
+  <% if studio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(studio.errors.count, "error") %> prohibited this studio from being saved:</h2>
+
+      <ul>
+      <% studio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :studio_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, id: :studio_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.check_box :status, id: :studio_status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
